@@ -1,0 +1,14 @@
+/* Write your CSS here */
+.age-cont {
+  background-color: #1c1c2b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin-bottom: 15px;
+}
+
+.graph-titles {
+  color: #94a3b8;
+}
