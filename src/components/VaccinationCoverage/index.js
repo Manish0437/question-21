@@ -21,36 +21,36 @@ const VaccinationCoverage = props => {
   return (
     <div className="coverage-cont">
       <h1 className="graph-titles">Vaccination Coverage</h1>
-      <ResponsiveContainer width="100%" height={500}>
-        <BarChart
-          data={last7DaysVaccination}
-          margin={{
-            top: 5,
+      <BarChart
+        width={1000}
+        height={300}
+        data={last7DaysVaccination}
+        margin={{
+          top: 5,
+        }}
+      >
+        <XAxis
+          dataKey="vaccination_date"
+          tick={{
+            stroke: 'gray',
+            strokeWidth: 1,
           }}
-        >
-          <XAxis
-            dataKey="vaccination_date"
-            tick={{
-              stroke: 'gray',
-              strokeWidth: 1,
-            }}
-          />
-          <YAxis
-            tickFormatter={DataFormatter}
-            tick={{
-              stroke: 'gray',
-              strokeWidth: 0,
-            }}
-          />
-          <Legend
-            wrapperStyle={{
-              padding: 30,
-            }}
-          />
-          <Bar dataKey="dose_1" name="Dose 1" fill="#5a8dee" barSize="20%" />
-          <Bar dataKey="dose_2" name="Dose 2" fill="#f54394" barSize="20%" />
-        </BarChart>
-      </ResponsiveContainer>
+        />
+        <YAxis
+          tickFormatter={DataFormatter}
+          tick={{
+            stroke: 'gray',
+            strokeWidth: 0,
+          }}
+        />
+        <Legend
+          wrapperStyle={{
+            padding: 30,
+          }}
+        />
+        <Bar dataKey="dose_1" name="Dose 1" fill="#5a8dee" barSize="20%" />
+        <Bar dataKey="dose_2" name="Dose 2" fill="#f54394" barSize="20%" />
+      </BarChart>
     </div>
   )
 }
